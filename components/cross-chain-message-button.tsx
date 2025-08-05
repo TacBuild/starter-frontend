@@ -21,7 +21,6 @@ export function CrossChainMessageButton() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showTracker, setShowTracker] = useState(false);
 
-  // Show toast for transaction errors
   useEffect(() => {
     if (transactionState.error) {
       toast.error("Transaction Failed");
@@ -47,7 +46,6 @@ export function CrossChainMessageButton() {
     }
   };
 
-  // Show error state
   if (initError) {
     return (
       <Tooltip>
@@ -66,7 +64,6 @@ export function CrossChainMessageButton() {
     );
   }
 
-  // Show wallet not connected
   if (!connected) {
     return (
       <Tooltip>
@@ -84,27 +81,15 @@ export function CrossChainMessageButton() {
       </Tooltip>
     );
   }
-
-  // Show SDK not ready
   if (!isReady) {
     return (
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <span>
-            <Button size="lg" disabled>
-              <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-              Initializing SDK...
-            </Button>
-          </span>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>Initializing TAC SDK</p>
-        </TooltipContent>
-      </Tooltip>
+      <Button size="lg" disabled>
+        <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+        Initializing SDK...
+      </Button>
     );
   }
 
-  // Show transaction success
   if (showSuccess) {
     return (
       <Button size="lg" variant="secondary" disabled>
@@ -114,7 +99,6 @@ export function CrossChainMessageButton() {
     );
   }
 
-  // Default ready state (includes error state)
   return (
     <>
       <Button

@@ -4,7 +4,7 @@ import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import { ReactNode } from "react";
 
 const manifestUrl =
-  "https://raw.githubusercontent.com/TacBuild/first-force/refs/heads/main/ton-manifest.json";
+  "https://raw.githubusercontent.com/TacBuild/starter-frontend/refs/heads/v2/public/tonconnect-manifest.json";
 
 interface TonConnectProviderProps {
   children: ReactNode;
