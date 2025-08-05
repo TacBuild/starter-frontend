@@ -1,7 +1,5 @@
 {
-  "url": "https://starter-frontend.tac.build",
+  "url": "https://github.com/TacBuild/starter-frontend",
   "name": "TAC Starter Frontend",
-  "iconUrl": "https://starter-frontend.tac.build/tac.png",
-  "termsOfUseUrl": "https://tac.build/terms",
-  "privacyPolicyUrl": "https://tac.build/privacy"
+  "iconUrl": "https://raw.githubusercontent.com/TacBuild/starter-frontend/refs/heads/main/public/tac.jpg"
 }
